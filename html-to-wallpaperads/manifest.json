@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "HTML Wallpaper",
+	"version": "1.0.0",
+	"description": "Use any HTML/CSS/JS as your new tab wallpaper",
+	"icons": {
+		"48": "icons/icon-48.png",
+		"96": "icons/icon-96.png"
+	},
+	"permissions": [
+	"storage",
+	"unlimitedStorage"
+	],
+	"chrome_url_overrides": {
+		"newtab": "newtab/newtab.html"
+	},
+	"browser_action": {
+		"default_icon": { "48": "icons/icon-48.png" },
+		"default_title": "Edit HTML Wallpaper",
+		"default_popup": "editor/editor.html"
+	},
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "html-wallpaper@local",
+			"strict_min_version": "78.0"
+		}
+	}
+}

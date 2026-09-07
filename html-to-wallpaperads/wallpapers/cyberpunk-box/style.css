@@ -1,0 +1,192 @@
+* {
+box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #05030a;
+}
+
+.gridscan {
+	position: fixed;
+	inset: 0;
+	overflow: hidden;
+	background:
+	radial-gradient(
+		ellipse at 50% 45%,
+		rgba(255, 159, 252, 0.08),
+					transparent 45%
+	),
+	#05030a;
+}
+
+/* GRID */
+.grid {
+	position: absolute;
+	inset: -60%;
+	background-image:
+	linear-gradient(
+		rgba(47, 41, 58, 0.8) 1px,
+					transparent 1px
+	),
+	linear-gradient(
+		90deg,
+		rgba(47, 41, 58, 0.8) 1px,
+					transparent 1px
+	);
+	background-size: 42px 42px;
+	
+	transform:
+	perspective(700px)
+	rotateX(58deg)
+	translateY(10%);
+	
+	transform-origin: center;
+	opacity: 0.85;
+	
+	animation: gridMove 7s linear infinite;
+}
+
+/* SCANNING GLOW */
+.scan-beam {
+	position: absolute;
+	left: -10%;
+	width: 120%;
+	height: 220px;
+	top: -220px;
+	
+	background: linear-gradient(
+		to bottom,
+		transparent,
+		rgba(255, 159, 252, 0.03),
+								rgba(255, 159, 252, 0.14),
+								rgba(255, 159, 252, 0.04),
+								transparent
+	);
+	
+	animation: scanDown 4s linear infinite;
+}
+
+/* BRIGHT SCAN LINE */
+.scan-line {
+	position: absolute;
+	left: 0;
+	top: -2px;
+	width: 100%;
+	height: 2px;
+	
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(255, 159, 252, 0.7) 20%,
+								#ff9ffc 50%,
+								rgba(255, 159, 252, 0.7) 80%,
+								transparent
+	);
+	
+	box-shadow:
+	0 0 8px rgba(255, 159, 252, 0.8),
+	0 0 20px rgba(255, 159, 252, 0.4);
+	
+	animation: lineDown 4s linear infinite;
+}
+
+/* CENTER PULSE */
+.scan-pulse {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 220px;
+	height: 220px;
+	
+	border: 1px solid rgba(255, 159, 252, 0.3);
+	
+	transform: translate(-50%, -50%);
+	
+	animation: pulse 3s ease-in-out infinite;
+}
+
+/* HUD */
+.hud {
+	position: absolute;
+	left: 24px;
+	bottom: 22px;
+	
+	display: flex;
+	gap: 14px;
+	
+	font-family: monospace;
+	font-size: 10px;
+	letter-spacing: 3px;
+	
+	color: rgba(255, 159, 252, 0.55);
+}
+
+.hud span:last-child {
+	color: rgba(255, 255, 255, 0.25);
+}
+
+/* VIGNETTE */
+.vignette {
+	position: absolute;
+	inset: 0;
+	
+	pointer-events: none;
+	
+	background: radial-gradient(
+		ellipse at center,
+		transparent 30%,
+		rgba(0, 0, 0, 0.25) 70%,
+								rgba(0, 0, 0, 0.75) 100%
+	);
+}
+
+/* GRID MOVEMENT */
+@keyframes gridMove {
+	from {
+		background-position: 0 0, 0 0;
+	}
+	
+	to {
+		background-position: 0 420px, 420px 0;
+	}
+}
+
+/* SCAN */
+@keyframes scanDown {
+	from {
+		transform: translateY(0);
+	}
+	
+	to {
+		transform: translateY(calc(100vh + 450px));
+	}
+}
+
+@keyframes lineDown {
+	from {
+		transform: translateY(0);
+	}
+	
+	to {
+		transform: translateY(100vh);
+	}
+}
+
+/* PULSE */
+@keyframes pulse {
+	0%,
+	100% {
+		transform: translate(-50%, -50%) scale(0.7);
+		opacity: 0.03;
+	}
+	
+	50% {
+		transform: translate(-50%, -50%) scale(1.5);
+		opacity: 0.22;
+	}
+}

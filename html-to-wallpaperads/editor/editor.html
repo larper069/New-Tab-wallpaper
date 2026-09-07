@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTML Wallpaper Editor</title>
+<link rel="stylesheet" href="editor.css">
+</head>
+<body>
+
+<div class="editor-layout">
+
+<!-- Left: code editors -->
+<div class="code-side">
+
+<header>
+<h1>🎨 HTML Wallpaper</h1>
+<div class="header-actions">
+<button id="apply" class="btn primary">▶ Apply</button>
+<button id="auto-apply-btn" class="btn toggle" title="Auto-apply on change">⚡ Auto</button>
+</div>
+</header>
+
+<!-- Tabs -->
+<div class="tabs">
+<button class="tab active" data-tab="html">HTML</button>
+<button class="tab" data-tab="css">CSS</button>
+<button class="tab" data-tab="js">JS</button>
+</div>
+
+<div class="editor-area">
+<textarea id="ed-html" class="editor active" spellcheck="false" placeholder="Your HTML here..."></textarea>
+<textarea id="ed-css" class="editor" spellcheck="false" placeholder="Your CSS here..."></textarea>
+<textarea id="ed-js" class="editor" spellcheck="false" placeholder="Your JavaScript here..."></textarea>
+</div>
+
+<!-- Presets -->
+<div class="presets-bar">
+<span class="presets-label">Presets:</span>
+<div class="preset-list" id="preset-list"></div>
+</div>
+
+<!-- Save / Load -->
+<div class="bottom-bar">
+<button id="save-slot" class="btn small">💾 Save</button>
+<select id="slots">
+<option value="">— saved wallpapers —</option>
+</select>
+<button id="load-slot" class="btn small">📂 Load</button>
+<button id="del-slot" class="btn small danger">🗑</button>
+<span class="spacer"></span>
+<button id="export" class="btn small">📤 Export</button>
+<button id="import" class="btn small">📥 Import</button>
+<input type="file" id="import-file" accept=".html,.htm,.json" hidden>
+</div>
+
+</div>
+
+<!-- Right: preview -->
+<div class="preview-side">
+<div class="preview-header">
+<span>Preview</span>
+<select id="preview-size">
+<option value="fill">Fill</option>
+<option value="1920x1080">1920×1080</option>
+<option value="2560x1440">2560×1440</option>
+<option value="3840x2160">3840×2160</option>
+<option value="1080x1920">1080×1920 (mobile)</option>
+</select>
+</div>
+<div class="preview-wrap">
+<iframe id="preview" sandbox="allow-scripts"></iframe>
+</div>
+</div>
+
+</div>
+
+<script src="editor.js"></script>
+
+<section id="premium-wallpapers" class="premium-wallpapers">
+  <div class="premium-head">
+    <div>
+      <div class="premium-kicker">WALLPAPER LIBRARY</div>
+      <h2>Premium presets</h2>
+      <p>Minimal, molecular, 3D and ASCII scenes — ready to use.</p>
+    </div>
+  </div>
+  <div class="premium-grid" id="premium-grid"></div>
+</section>
+
+</body>
+</html>
