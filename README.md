@@ -15,6 +15,7 @@ So this is a vibecoded wallpaper extension for new tab and i specifically wanted
  
  • Open a new tab to see your custom wallpaper in action!
 
- ## And to make it permanent go to about:addons and add the extension from there and don't forget to stop tab pre-loading
+ ## And to make it permanent go to about:addons and add the (.XPI) file from there and don't forget to stop tab pre-loading
   Type about:config in the Firefox address bar and hit Enter (accept the warning risk). 
-  Search for browser.newtab.preload.Double-click it to toggle its value from true to false.  
+  
+  Search for browser.newtab.preload. Double-click it to toggle its value from true to false.  
