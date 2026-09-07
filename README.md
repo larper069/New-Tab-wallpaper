@@ -1,8 +1,9 @@
 # New-Tab-wallpaper
 So this is a vibecoded wallpaper extension for new tab and i specifically wanted to make wallpapers from html so i can have more control and also less resource usage it's not that much good at resource optimization though. While there are three seperate tabs one for HTML one for CSS and one for JS. I would recommend to don't use js because of browsers script restrictions you should try to use only html and css to make the wallpaper 
-Installation & Setup
 
-  Clone or Download this repository to your local machine.
+# Installation & Setup
+
+  ## Clone or Download this repository to your local machine.
 
  • Open Firefox and navigate to about:debugging.
  • Click This Firefox on the left sidebar.
