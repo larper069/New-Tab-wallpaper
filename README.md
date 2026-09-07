@@ -3,7 +3,7 @@ So this is a vibecoded wallpaper extension for new tab and i specifically wanted
 
 # Installation & Setup
 
-  ## Clone or Download this repository to your local machine.
+   Clone or Download this repository to your local machine.
 
  • Open Firefox and navigate to about:debugging.
  • Click This Firefox on the left sidebar.
