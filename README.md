@@ -6,9 +6,13 @@ So this is a vibecoded wallpaper extension for new tab and i specifically wanted
    Clone or Download this repository to your local machine.
 
  • Open Firefox and navigate to about:debugging.
+ 
  • Click This Firefox on the left sidebar.
+ 
  • Click the Load Temporary Add-on... button.
+ 
  • Select the manifest.json file inside your project directory.
+ 
  • Open a new tab to see your custom wallpaper in action!
 
  ## And to make it permanent go to about:addons and add the extension from there and don't forget to stop tab pre-loading
